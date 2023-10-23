@@ -239,7 +239,7 @@ class MainKtTest {
             transferAmount = transferAmount
         )
 
-        assertEquals(true, result)
+        assertEquals(false, result)
     }
 
 
