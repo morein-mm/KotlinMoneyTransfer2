@@ -5,6 +5,11 @@ fun main() {
     val transferAmount = 5_000.00 //сумма перевода
     val thisDayTransferAmount = 0.0 //сумма переводов за текуший день (без комиссии), не включая текущий перевод
 
+    checkTransferAndCalcCommission(cardType, thisMonthTransferAmount, thisDayTransferAmount, transferAmount)
+
+}
+
+fun checkTransferAndCalcCommission(cardType: String, thisMonthTransferAmount: Double, thisDayTransferAmount:Double, transferAmount: Double) {
     if (checkLimits(cardType, thisMonthTransferAmount, thisDayTransferAmount, transferAmount))
         println(calcCommission(cardType, thisMonthTransferAmount, transferAmount))
     else
